@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 
 class Navigation extends Component {
   render() {
     return (
-      <nav  className= "navbar navbar-dark bg-dark">
-        <a href="#root" className="text-white">
-        Burger Queen</a>
-      </nav>
+      <div>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="orderview">Burger Queen</Navbar.Brand>
+          <Nav className="mr-auto">
+          </Nav>
+          <Form inline>
+            <Button variant="outline-info" href="/">Regresar</Button>
+          </Form>
+        </Navbar>
+      </div>
     );
   }
 }
 export default Navigation;
+
