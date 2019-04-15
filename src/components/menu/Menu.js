@@ -1,18 +1,38 @@
-import React, { Component } from 'react';
-import FormCustomer from './FormCustomer';
+import React from 'react';
 import { MDBBtn } from "mdbreact";
 
-class Menu extends Component {
-  render() {
-    return (
+export const Breakfast = (arr) =>{
+  console.log(arr)
+  const products = arr.map((product)=>{
+    if(product.categoria === 'Desayuno'){
+      return(
+        <MDBBtn outline color="warning">{product.nombre}</MDBBtn>
+      )
+    }
+  });
+  return (
       <div>
-          <FormCustomer></FormCustomer>
-          <div className="container">
-            <MDBBtn  color="pink">Desayuno</MDBBtn>
-            <MDBBtn color="cyan">Almuerzo y cena</MDBBtn>
-          </div>
+        <ul>
+          {products}
+        </ul>
       </div>
-    );
-  }
-}
-export default Menu;
+  )};
+
+  export const LunchDinner = (arr) =>{
+    console.log(arr)
+    const products = arr.map((product)=>{
+      if(product.categoria === 'Resto del dia'){
+        return(
+          <MDBBtn outline color="warning">{product.nombre}</MDBBtn>
+        )
+      }
+    });
+    return (
+        <div>
+          <ul>
+            {products}
+          </ul>
+        </div>
+    )};
+
+
