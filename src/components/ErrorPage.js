@@ -4,7 +4,7 @@ class Error extends Component {
   render() {
     return (
       <div>
-          <p>No se puede encontrar la ruta especificada </p>
+        <p>No se puede encontrar la ruta especificada </p>
       </div>
     );
   }

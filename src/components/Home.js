@@ -1,28 +1,33 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import './Home.css';
-import waiter from '../img/waiter.png'
-import chef from '../img/chef.png'
-import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import title from '../img/title.png';
 
 class Home extends Component {
   render() {
     return (
-      <div className= "bg">
+      <div className="bg">
         <Container>
-          <Row>
-            <Col xs={6} md={4}>
-              <a href="orderview" className="orange">
-                <div>Mesero</div>
-                <div><Image src={waiter}></Image></div>
-              </a>
+          <Row className="row align-items-center">
+            <Col sm={6} xs={12}>
+              <div><Image className="img-title" src={title} /></div>
             </Col>
-            <Col xs={6} md={4}>
-              <a href="orderview" >
-                <div>Mesero</div>
-                <div><Image src={chef} className=''></Image></div>
+            <Col sm={6} xs={12} className="align-self-end">
+              <br />
+              <br />
+              <br />
+              <a href="orderview">
+                <div className="btn-user">Mesero</div>
+              </a>
+              <br />
+              <br />
+              <br />
+              <a href="orderview">
+                <div className="btn-user">Cocinero</div>
               </a>
             </Col>
           </Row>
