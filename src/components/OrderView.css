@@ -1,0 +1,10 @@
+.main-orderview{
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+.main-pedido{
+    background: #cda56d;
+}
+.title-pedido{
+    width: 100%; 
+    text-align: center !important;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 
 export const Breakfast = ({ callback}) => {
   const arr = callback();
@@ -7,13 +8,18 @@ export const Breakfast = ({ callback}) => {
     if (product.categoria === 'Desayuno') {
       return (
         <div>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src=""/>
-            <Card.Body>
-              <Card.Title>{product.nombre}</Card.Title>
-              <Card.Text>4</Card.Text>
-            </Card.Body>
-          </Card>
+          <a>
+            <Card className="main-card" style={{ width: '10rem' }}>
+              <Card.Img variant="top" src="" />
+              <Card.Body>
+                <Card.Title>{product.nombre}</Card.Title>
+                <Image src=""></Image>
+                <Card.Text>S/. {product.precio}</Card.Text>
+              </Card.Body>
+            </Card>
+            <br />
+          </a>
+          
         </div>
       );
     }
