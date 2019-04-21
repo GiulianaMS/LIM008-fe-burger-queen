@@ -13,7 +13,7 @@ export const Breakfast = ({ callback}) => {
               <Card.Img variant="top" src="" />
               <Card.Body>
                 <Card.Title>{product.nombre}</Card.Title>
-                <Image src=""></Image>
+                <Image className="img-product" src={product.imagen}></Image>
                 <Card.Text>S/. {product.precio}</Card.Text>
               </Card.Body>
             </Card>
