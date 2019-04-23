@@ -1,4 +1,29 @@
+.block{
+    padding: 0px;
+    margin: 0px;
+    background-color: blue;
+}
+.list-product{
+    margin: 10px;
+    float: left;
+    background-color: white;
+    border: white 0px;
+    padding: 0px;
+}
+.main-card{
+    width: 100%; 
+    text-align: center !important;
+    background-color: green;
+    padding: 0px;
+}
 .img-product{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.display-inlineblock {
+    display: inline-block;
+}
+.card-title{
+    font-size: 13px;
 }
