@@ -1,9 +1,10 @@
 import React from 'react';
 import './Menu.css';
+import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 
-const CardProductExtend = data => (
+const CardProductExtend = ({ data, addPedido }) => (
   <span type="button" className="list-product">
     <Card className="main-card" style={{ width: '9rem' }}>
       <Card.Body>
@@ -22,9 +23,14 @@ const CardProductExtend = data => (
           <option>Ninguno</option>
         </select>
       </Card.Body>
-      <button className="btn-hamburguer"> Enviar </button>
+      <button className="btn-hamburguer" onClick={() => addPedido(data)}> Enviar </button>
     </Card>
   </span>
 );
 
 export default CardProductExtend;
+
+CardProductExtend.propTypes = {
+  data: PropTypes.shape({}).isRequired,
+  addPedido: PropTypes.func.isRequired,
+};

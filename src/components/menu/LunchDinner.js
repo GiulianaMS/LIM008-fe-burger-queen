@@ -1,17 +1,18 @@
 import React from 'react';
 import './Menu.css';
+import PropTypes from 'prop-types';
 import getProductsFirebase from 'D:/PORTAFOLIO/LIM008-fe-burger-queen/src/controller/ProductsFirebase';
 import CardProduct from './CardProduct';
 import CardProductExtend from './CardProductExtend';
 
-const LunchDinner = () => {
+const LunchDinner = ({ addPedido }) => {
   const arr = getProductsFirebase();
   const Hamburguesas = arr.map((product) => {
     if (product.categoria === 'Resto del dia') {
       if (product.tipo === 'Hamburguesas') {
         return (
           <div className="display-inlineblock">
-            {CardProductExtend(product)}
+            <CardProductExtend data={product} addPedido={addPedido} />
           </div>
         );
       }
@@ -22,7 +23,7 @@ const LunchDinner = () => {
       if (product.tipo === 'Acompañamientos') {
         return (
           <div className="display-inlineblock">
-            {CardProduct(product)}
+            <CardProduct data={product} addPedido={addPedido} />
           </div>
         );
       }
@@ -33,7 +34,7 @@ const LunchDinner = () => {
       if (product.tipo === 'Para tomar') {
         return (
           <div className="display-inlineblock">
-            {CardProduct(product)}
+            <CardProduct data={product} addPedido={addPedido} />
           </div>
         );
       }
@@ -56,4 +57,8 @@ const LunchDinner = () => {
     </div>
   );
 };
-export default LunchDinner
+export default LunchDinner;
+
+LunchDinner.propTypes = {
+  addPedido: PropTypes.func.isRequired,
+};
