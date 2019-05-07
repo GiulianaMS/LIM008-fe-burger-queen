@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import firebase from '../components/FirebaseConfig';
 
 const getProductsFirebase = () => {
@@ -15,4 +15,5 @@ const getProductsFirebase = () => {
   }, []);
   return getProducts;
 };
+
 export default getProductsFirebase;
