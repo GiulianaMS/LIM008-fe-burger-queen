@@ -9,7 +9,8 @@ import Pedido from './pedido/Pedido';
 const OrderView = () => {
   const [isMenu, setisMenu] = useState([]);
   const addPedido = (obj) => {
-    const arr = [...isMenu, obj];
+    obj.cantidad = 1;
+    const arr = [...isMenu, obj];   
     setisMenu(arr);
   };
 
@@ -24,9 +25,6 @@ const OrderView = () => {
         </div>
         {/* pedido */}
         <div className="main-pedido col-sm-6 col-xs-12 p-3">
-          <div className="aling-center">
-            <h4 className="title-pedido">Pedido</h4>
-          </div>
           <Pedido isMenu={isMenu} />
           <MDBFooter color="black" className="font-small mt-2">
             <div className="footer-copyright text-center py-2">
