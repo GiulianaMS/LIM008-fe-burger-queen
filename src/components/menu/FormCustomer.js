@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class FormCustomer extends Component {
-  getValue = (event)=>{
+  getValue = (event) => {
     this.setState({
       fullName : event.target.value
     })
